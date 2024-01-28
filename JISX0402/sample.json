@@ -1,0 +1,20 @@
+{
+  "cities": [
+    {
+      "pref_code": "pref_code",
+      "city_code": "city_code",
+      "name": "name",
+      "kana_name": {
+        "half_upper": "half_upper",
+        "full_lower": "full_lower"
+      },
+      "en_name": {
+        "en": "en"
+      },
+      "start_date": null,
+      "end_date": null,
+      "remark": null,
+      "note": "note"
+    }
+  ]
+}
