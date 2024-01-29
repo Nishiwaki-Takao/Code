@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\JISX0304",
+    "\\JISX0401",
     "\\JISX0402"
   ],
-  "SelectedNode": "\\JISX0402\\City_schema.json",
+  "SelectedNode": "\\JISX0402\\City_list.json",
   "PreviewInSolutionExplorer": false
 }
