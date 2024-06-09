@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+
+        "prefecture_code": {
+            "type": "string",
+            "pattern": "^(0[1-9]|[1-3][0-9]|4[0-7])$",
+            "description": "JIS X 0401の都道府県コード(01~41),Prefecture Code in JIS X 0401. The value ranges from '01' to '47'. "
+        },
+        "designated_city_code":{
+            "type":"string",
+            "pattern": "^1[0-9][0-9]$",
+            "description": "特別区の区域及び指定都市の市区町村コード(100~199),Municipality code for Designated Cities and the area of Special Wards.The value ranges from '100' to '199'."
+        },
+        "ward_code":{
+            "type":"string",
+            "pattern": "^(10[1-9]|1[1-9][0-9])$",
+            "description": "特別区及び指定都市の区の市区町村コード(101~199),Municipality code for Special Wards and wards in Designated Cities.The value ranges from '100' to '199'."
+        },
+        "city_code":{
+            "type":"string",
+            "pattern": "^(20[1-9]|2[1-9][0-9])$",
+            "description": "指定都市ではない市の市区町村コード(201~299),Municipality code for nomal Cities.The value ranges from '100' to '199'."
+        }
+    }
+}
