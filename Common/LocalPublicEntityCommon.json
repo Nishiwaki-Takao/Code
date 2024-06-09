@@ -1,7 +1,6 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft2022-12/schema",
     "definitions": {
-
         "prefecture_code": {
             "type": "string",
             "pattern": "^(0[1-9]|[1-3][0-9]|4[0-7])$",
@@ -15,12 +14,18 @@
         "ward_code":{
             "type":"string",
             "pattern": "^(10[1-9]|1[1-9][0-9])$",
-            "description": "特別区及び指定都市の区の市区町村コード(101~199),Municipality code for Special Wards and wards in Designated Cities.The value ranges from '100' to '199'."
+            "description": "特別区及び指定都市の区の市区町村コード(101~199),Municipality code for Special Wards and wards in Designated Cities.The value ranges from '101' to '199'."
         },
         "city_code":{
             "type":"string",
             "pattern": "^(20[1-9]|2[1-9][0-9])$",
-            "description": "指定都市ではない市の市区町村コード(201~299),Municipality code for nomal Cities.The value ranges from '100' to '199'."
+            "description": "指定都市ではない市の市区町村コード(201~299),Municipality code for nomal Cities.The value ranges from '201' to '299'."
+        },
+        "town_village_code": {
+            "type":"string",
+            "pattern": "^[3-7](?![02468]0$)",
+            "description": "指定都市ではない市の市区町村コード(201~299),Municipality code for nomal Cities.The value ranges from '201' to '299'."
         }
+
     }
 }
