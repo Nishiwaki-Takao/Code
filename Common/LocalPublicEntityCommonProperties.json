@@ -9,7 +9,7 @@
         },
         "PhoneticTransliteration": {
             "type": "string",
-            "pattern": "^[a-zA-ZĀ-ž\\s]*$",
+            "pattern": "^[a-zA-ZÔô\\s]*$",
             "description": "English name of the local public entity."
         },
         "ZenkakuRegexPattern": {
