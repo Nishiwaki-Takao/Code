@@ -35,21 +35,19 @@
             }
           },
           "en_name": {
-            "description": "都道府県名英字",
+            "description": "都道府県名英字 ISO 3166-2:JPを参照",
             "type": "object",
             "properties": {
               "en": {
-                "description": "ISO 3166-2:JPのen",
-                "type": [
-                  "string",
-                  "null"
-                ]
+                "$ref": "../common/LocalPublicEntityCommonProperties.json#/definitions/StandardTransliteration",
+                "description": "ISO 3166-2:JPのen"
               },
               "ja": {
-                "description": "ISO 3166-2:JPのjp",
-                "type": "string"
+                "$ref": "../common/LocalPublicEntityCommonProperties.json#/definitions/PhoneticTransliteration",
+                "description": "ISO 3166-2:JPのjp"
               }
-            }
+            },
+            "required" : ["ja"]
           },
           "start_date": {
             "description": "適用開始日",

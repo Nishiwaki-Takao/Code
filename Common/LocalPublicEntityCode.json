@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$comment": "This JSON file provides regex patterns for local public entities.",
   "definitions": {
     "city_code": {
       "description": "JIS X 0402の指定都市ではない市の市区町村コード(201~299),Municipality code  in JIS X 0402  for nomal Cities.The value ranges from '201' to '299'.",
