@@ -5,12 +5,12 @@
         "StandardTransliteration": {
             "type": "string",
             "pattern": "^[a-zA-Z\\s]*$",
-            "description": "English name of the local public entity."
+            "description": "regex pattern for Standard Transliteration."
         },
         "PhoneticTransliteration": {
             "type": "string",
             "pattern": "^[a-zA-ZÔô\\s]*$",
-            "description": "English name of the local public entity."
+            "description": "regex pattern for Phonetic Transliteration."
         },
         "ZenkakuRegexPattern": {
             "type": "string",
@@ -21,6 +21,23 @@
             "type": "string",
             "pattern": "^[ｦ-ﾟ]*$",
             "description": "半角カナ、拗音・促音は大書き"
+        },
+        "prefecture_namepattern": {
+            "description": "都道府県名",
+            "type": "string",
+            "pattern": "^(北海道|東京都|(大阪|京都)府|(青森|岩手|宮城|秋田|山形|福島|茨城|栃木|群馬|埼玉|千葉|神奈川|新潟|富山|石川|福井|山梨|長野|岐阜|静岡|愛知|三重|滋賀|兵庫|奈良|和歌山|鳥取|島根|岡山|広島|山口|徳島|香川|愛媛|高知|福岡|佐賀|長崎|熊本|大分|宮崎|鹿児島|沖縄)県)$"
+          },
+        "PrefectureBase":{ 
+            "type": "object",
+            "properties": {
+                "prefecture_code": {
+                    "$ref": "/prefecture_code.json#definitions/prefecture_code"
+                },
+                "prefecture_name": {
+                    "$ref": "#/definitions/prefecture_namepattern"
+                }
+                },
+                "required": ["prefecture_name"]
+            }
         }
     }
-}
