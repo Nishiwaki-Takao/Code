@@ -1,0 +1,5 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$comment": "This JSON file provides property schema include regex patterns for JISX0401 and histrical Prefectures",
+    "definitions": {}
+}
