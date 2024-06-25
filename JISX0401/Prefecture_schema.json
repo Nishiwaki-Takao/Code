@@ -1,4 +1,5 @@
 {
+  "$id": "Prefecture_schema",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$comment": "2020/08/08 @HirMtsd",
   "title": "Prefcture_list.json schema",
@@ -16,7 +17,7 @@
             "$ref": "../common/LocalPublicEntityCode.json#/definitions/prefecture_code"
           },
           "name": {
-            "$ref": "./Prefecture_schema_property.json#/definitions/prefecture_name"
+            "$ref": "./Prefecture_schema_property.json#/definitions/prefecture_namepattern"
           },
           "kana_name": {
             "description": "都道府県名カナ",

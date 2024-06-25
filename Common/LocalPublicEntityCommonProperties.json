@@ -21,18 +21,6 @@
             "type": "string",
             "pattern": "^[ｦ-ﾟ]*$",
             "description": "半角カナ、拗音・促音は大書き"
-        },
-        "PrefectureBase":{ 
-            "type": "object",
-            "properties": {
-                "prefecture_code": {
-                    "$ref": "/prefecture_code.json#definitions/prefecture_code"
-                },
-                "prefecture_name": {
-                    "$ref": "#/definitions/prefecture_namepattern"
-                }
-                },
-                "required": ["prefecture_name"]
-            }
+        }
         }
     }

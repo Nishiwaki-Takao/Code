@@ -1,5 +1,5 @@
 {
-  "$schema": "./Prefecture_schema.json",
+  "$schema": "Prefecture_schema.json",
   "$comment": "2020/04/01 @HirMtsd Last-Modified:2020/08/08",
   "title": "JIS X 0401:1973, ISO 3166-2:JP",
   "description": "Prefecture list json data",
