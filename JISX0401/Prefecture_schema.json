@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$comment": "2020/08/08 @HirMtsd",
   "title": "Prefcture_list.json schema",
   "description": "Prefecture list (JIS X 0401:1973, ISO 3166-2:JP) json schema",
@@ -16,31 +16,35 @@
             "$ref": "../common/LocalPublicEntityCode.json#/definitions/prefecture_code"
           },
           "name": {
-            "$ref": "Prefecture_shcema_property.json#/definitions/prefecture_name"
+            "$ref": "./Prefecture_schema_property.json#/definitions/prefecture_name"
           },
           "kana_name": {
             "description": "都道府県名カナ",
             "type": "object",
             "properties": {
               "half_upper": {
-                "$ref": "../Common/LocalPublicEntityCommonProperties.json#/definitions/ZenkakuRegexPattern"
-              },
-              "full_lower": {
                 "$ref": "../Common/LocalPublicEntityCommonProperties.json#/definitions/HankakuRegexPattern"
               },
-              "required": ["half_upper", "full_lower"]
-            }
+              "full_lower": {
+                "$ref": "../Common/LocalPublicEntityCommonProperties.json#/definitions/ZenkakuRegexPattern"
+              }
+            },
+            "required": ["half_upper", "full_lower"]
           },
           "en_name": {
             "description": "都道府県名英字 ISO 3166-2:JPを参照",
             "type": "object",
             "properties": {
               "en": {
-                "$ref": "../common/LocalPublicEntityCommonProperties.json#/definitions/StandardTransliteration",
+                "allOf": [
+                {"$ref": "../common/LocalPublicEntityCommonProperties.json#/definitions/StandardTransliteration"
+                }],
                 "description": "ISO 3166-2:JPのen"
               },
               "ja": {
-                "$ref": "../common/LocalPublicEntityCommonProperties.json#/definitions/PhoneticTransliteration",
+                "allOf": [
+                {"$ref": "../common/LocalPublicEntityCommonProperties.json#/definitions/PhoneticTransliteration"
+                }],
                 "description": "ISO 3166-2:JPのjp"
               }
             },
