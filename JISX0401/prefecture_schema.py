@@ -17,5 +17,7 @@ try:
     validate(json_data, json_schema, format_checker=FormatChecker())
 except ValidationError as e:
     print(e.message)
+    sys.exit(1)
 
 print('CHECK END')
+sys.exit(0)
