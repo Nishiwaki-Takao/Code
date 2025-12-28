@@ -17,7 +17,7 @@ with open('Prefecture_list.json', encoding="utf-8") as file_json:
     json_data = json.load(file_json)
 
 COMMON = Path(__file__).parent.parent / 'Common'
-registry = Registry().with_resources({
+registry = Registry().with_resources([
     # LocalPublicEntityCode.json
     f"file://{(COMMON / 'LocalPublicEntityCode.json').as_posix()}":
         Resource.from_contents(
@@ -29,7 +29,7 @@ registry = Registry().with_resources({
         Resource.from_contents(
             json.loads((COMMON / 'LocalPublicEntityCommonProperties.json').read_text(encoding="utf-8"))
         ),
-})
+])
 
 try:
     Draft202012Validator(json_data, json_schema,registry=registry, format_checker=FormatChecker())
