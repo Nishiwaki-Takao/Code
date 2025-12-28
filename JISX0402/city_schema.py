@@ -4,7 +4,7 @@
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 # 2020/08/08
 
-import json
+import json ,sys
 from jsonschema import validate, ValidationError, FormatChecker
 
 with open('City_schema.json', encoding="utf-8") as file_schema:
