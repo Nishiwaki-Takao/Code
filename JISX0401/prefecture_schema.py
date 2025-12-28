@@ -13,8 +13,13 @@ with open('Prefecture_schema.json', encoding="utf-8") as file_schema:
 with open('Prefecture_list.json', encoding="utf-8") as file_json:
     json_data = json.load(file_json)
 
+resolver = RefResolver(
+    base_uri=f"file://{BASE.as_posix()}/",
+    referrer=schema,
+)
+
 try:
-    validate(json_data, json_schema, format_checker=FormatChecker())
+    Draft2020Validator(json_data, json_schema,resolver=resolver, format_checker=FormatChecker())
 except ValidationError as e:
     print(e.message)
     sys.exit(1)
