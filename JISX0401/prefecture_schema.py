@@ -5,7 +5,7 @@
 # 2020/08/08
 
 import json ,sys
-from jsonschema import validate, ValidationError, FormatChecker
+from jsonschema import validate, ValidationError, FormatChecker, Draft2020Validator, RefResolver
 
 with open('Prefecture_schema.json', encoding="utf-8") as file_schema:
     json_schema = json.load(file_schema)
