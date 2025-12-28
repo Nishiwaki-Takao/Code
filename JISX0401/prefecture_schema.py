@@ -18,17 +18,18 @@ with open('Prefecture_list.json', encoding="utf-8") as file_json:
 
 COMMON = Path(__file__).parent.parent / 'Common'
 registry = Registry().with_resources([
-    # LocalPublicEntityCode.json
-    f"file://{(COMMON / 'LocalPublicEntityCode.json').as_posix()}":
+    (
+        f"file://{(COMMON / 'LocalPublicEntityCode.json').resolve().as_posix()}",
         Resource.from_contents(
             json.loads((COMMON / 'LocalPublicEntityCode.json').read_text(encoding="utf-8"))
-        ),
-
-    # LocalPublicEntityCommonProperties.json
-    f"file://{(COMMON / 'LocalPublicEntityCommonProperties.json').as_posix()}":
+        )
+    ),
+    (
+        f"file://{(COMMON / 'LocalPublicEntityCommonProperties.json').resolve().as_posix()}",
         Resource.from_contents(
             json.loads((COMMON / 'LocalPublicEntityCommonProperties.json').read_text(encoding="utf-8"))
-        ),
+        )
+    ),
 ])
 
 try:
