@@ -19,8 +19,15 @@ jobs:
         run: |
           pip install jsonschema
 
-      - name: Run validator
+      - name: Run Country Validator
+        working-directory: JISX0304
+        run:  python country_schema.py
+
+      - name: Run Prefecture Validator
+        working-directory: JISX0401
         run: |
-          python JISX0304/country_schema.py
-          python JISX0401/prefecture_schema.py
-          python JISX0402/city_schema.py
+          python prefecture_schema.py
+      - name: Run City Validator
+        working-directory: JISX0402
+        run: |
+          python city_schema.py
