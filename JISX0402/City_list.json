@@ -256,7 +256,7 @@
                        "note":null},
     {"pref_code":"01", "city_code":"302", "name":"石狩郡　石狩町",
                        "kana_name":{"half_upper":"ｲｼｶﾘｸﾞﾝ ｲｼｶﾘﾁﾖｳ", "full_lower":"イシカリグン　イシカリチョウ"}, "en":"Ishikari-gun Ishikari-chō",
-                       "start_date":"0001-01-01", "end_date":"1996-09-01",+
+                       "start_date":"0001-01-01", "end_date":"1996-09-01",
                        "remark":{"start":null, "end":"01235石狩市", "other":null},
                        "note":null},
     {"pref_code":"01", "city_code":"303", "name":"石狩郡　当別町",
